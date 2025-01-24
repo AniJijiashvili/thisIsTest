@@ -1,0 +1,237 @@
+.container{
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 8px;
+
+    h1{
+        color:red;
+        font-size: 25px;
+    }
+    p{
+        font-size: 50px;
+        line-height: 1.5;
+        color:black;
+    }
+    button{
+        background-color: aqua;
+        border: 4px;
+        padding: 8px 12px;
+
+        &:hover{
+            background-color: black;
+        }
+
+
+    }
+    .inner-container{
+        background-color: bisque;
+        padding: 10px;
+        margin-top: 15px;
+
+        .p{
+            font-size: 40px;
+            color: green;
+        }
+        button{
+            background-color: blanchedalmond;
+            color:beige;
+        &:hover{
+            background-color: rgb(182, 123, 36);
+        }
+
+
+        }
+
+
+    }
+
+
+
+}
+
+//variables
+
+$primary-color:#2ada2a;
+$font-size-large:25px;
+
+body{
+    color: $primary-color;
+    font-size: $font-size-large;
+}
+
+// @extend and &
+
+%button-base{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primary-button{
+    @extend %button-base;
+    background-color: antiquewhite;
+    color: black;
+    &:hover{
+        background-color: red;
+    }
+    &:active{
+        background-color: azure
+    }
+    &:disabled{
+        background-color: aquamarine
+    }
+    
+}
+.secondary-button{
+    @extend %button-base;
+    background-color: antiquewhite;
+    color:red
+}
+//ფსევდო კლასები
+.card{
+    position: relative;
+    padding: 20px;
+    border:1px solid black;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &::after{
+        content: "New";
+        position: absolute;
+        top:10px;
+        left: 10px;
+    }
+}
+
+
+// @mixin
+
+// @mixin button-styles ($bg-color, $text-color: #fff, $padding:10px, $radius:5px ){
+//     background-color: $bg-color;
+//     color: $text-color;
+//     padding: $padding;
+//     border: none; 
+//     border-radius: $radius;
+//     text-align: center;
+// }
+
+// .primary-button{
+//     @include button-styles(#fff)
+// }
+// .secondary-button{
+//     @include button-styles((#fff), #000000,12px ,5px)
+// }
+
+
+// @use
+
+// @use "buttons" as btn;
+
+// .primary-button{
+//     @include btn.button-styles(#0000)
+// }
+
+// .container{
+// display: grid;
+// grid-template-columns: 100px 200px 100px;
+// grid-template-rows: 50px 100px;
+// }
+
+
+// .container{
+//     display: grid;
+//     grid-template-columns: repeat(3,1fr);
+//     grid-auto-rows: 100px;
+// }
+
+// .container{
+//     display: grid;
+//     grid-template-columns: 1fr 2fr 1fr;
+// }
+// .container{
+//     display: grid;
+//     grid-template-columns:repeat(3, minmax(100px, 1fr))
+// }
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    row-gap: 10px;
+    column-gap: 20px;
+    gap:5px
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+.item{
+    width:33.3%
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:1024px){
+   .container{
+    grid-template-columns: repeat(2,1fr);
+
+   } 
+   .item{
+width: 100%;
+   }
+
+}
+
+
+@media screen and (max-width:768px){
+    .container{
+     grid-template-columns: repeat(1,1fr);
+ 
+    } 
+ 
+}
+
+@media screen and (min-width:600px){
+    body{
+        background-color: red;
+    }
+}
+ 
+@media screen and (max-width:600px){
+    body{
+        background-color: green;
+    }
+}
+
+@media screen and (min-height:500px){
+    body{
+        background-color: aquamarine;
+    }
+}
+
+@media screen and (max-height:500px){
+    body{
+        background-color: yellow;
+    }
+}
+overflow: visible;
+overflow-x: hidden;
+overflow: scroll;;
+overflow: auto;
+@media screen and (min-width:650px) and (max-width:899,9x){
+
+
+}
+@media screen and (min-width:900px) {
+
+  
+}

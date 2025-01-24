@@ -1,0 +1,151 @@
+.container {
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 8px;
+}
+.container h1 {
+  color: red;
+  font-size: 25px;
+}
+.container p {
+  font-size: 50px;
+  line-height: 1.5;
+  color: black;
+}
+.container button {
+  background-color: aqua;
+  border: 4px;
+  padding: 8px 12px;
+}
+.container button:hover {
+  background-color: black;
+}
+.container .inner-container {
+  background-color: bisque;
+  padding: 10px;
+  margin-top: 15px;
+}
+.container .inner-container .p {
+  font-size: 40px;
+  color: green;
+}
+.container .inner-container button {
+  background-color: blanchedalmond;
+  color: beige;
+}
+.container .inner-container button:hover {
+  background-color: rgb(182, 123, 36);
+}
+
+body {
+  color: #2ada2a;
+  font-size: 25px;
+}
+
+.secondary-button, .primary-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: antiquewhite;
+  color: black;
+}
+.primary-button:hover {
+  background-color: red;
+}
+.primary-button:active {
+  background-color: azure;
+}
+.primary-button:disabled {
+  background-color: aquamarine;
+}
+
+.secondary-button {
+  background-color: antiquewhite;
+  color: red;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid black;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card::after {
+  content: "New";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  row-gap: 10px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  gap: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item {
+  width: 33.3%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: green;
+  }
+}
+@media screen and (min-height: 500px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+@media screen and (max-height: 500px) {
+  body {
+    background-color: yellow;
+  }
+}
+body {
+  overflow-x: hidden;
+}/*# sourceMappingURL=style.css.map */
